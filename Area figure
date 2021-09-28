@@ -1,0 +1,27 @@
+import kotlin.math.sqrt
+
+fun main() {
+    val a = readLine()!!.toString()
+
+    when (a) {
+        "rectangle" -> {
+            val side1 = readLine()!!.toDouble()
+            val side2 = readLine()!!.toDouble()
+            println(side1 * side2)
+        }
+        "circle" -> {
+            val r = readLine()!!.toInt()
+            println(3.14 * r * r)
+        }
+        "triangle" -> {
+            val sideA = readLine()!!.toDouble()
+            val sideB = readLine()!!.toDouble()
+            val sideC = readLine()!!.toDouble()
+            val p = 0.5 * (sideA + sideB + sideC)
+            val s = p * (p - sideA) * (p - sideB) * (p - sideC)
+            val sd: Double = sqrt(s)
+            println(sd)
+
+        }
+    }
+}
